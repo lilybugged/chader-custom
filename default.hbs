@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Crafty+Girls|Reenie+Beanie|Shadows+Into+Light|Yanone+Kaffeesatz|Indie+Flower|Amatic+SC|Merriweather|Architects+Daughter' rel='stylesheet' type='text/css'>
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{{asset '/css/style.css'}}" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="{{asset '/js/modernizr-1.5.min.js'}}"></script>
+   <link rel="shortcut icon" href="{{asset '/images/favicon.png'}}"/>
+   
+   <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic|Ubuntu+Condensed|Ubuntu+Mono:400,400italic,700,700italic|Yanone+Kaffeesatz:400,200,300,700|Voltaire|Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+   
+
+
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55968154-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+  <div id="main">
+  
+  
+  
+    <header>
+      <div id="logo">
+        <!-- class="logo_colour", allows you to change the colour of the text -->
+        <h1><a href="{{@blog.url}}"><span class="logo_colour">{{@blog.title}}</span></a></h1>
+      </div> 
+      {{>navigation}} 
+    </header>
+    
+    
+    
+    
+    
+    <div id="site_content">
+    
+      {{>sidebar}}
+      
+      
+     <!-- {{>slideshow}} -->
+        
+
+        <div id="content_item">
+				{{{body}}}
+        </div>
+        
+        
+      </div>
+    </div>
+    
+    
+    <footer>
+      <h5>&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. 
+	  <a href="http://impliedblush.com/policy-disclosures">Privacy & Disclosure</a> </h5>
+    </footer>
+    
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="{{asset '/js/jquery.js'}}"></script>
+  <script type="text/javascript" src="{{asset '/js/jquery.easing-sooper.js'}}"></script>
+  <script type="text/javascript" src="{{asset '/js/jquery.sooperfish.js'}}"></script>
+  <script type="text/javascript" src="{{asset '/js/image_fade.js'}}"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
